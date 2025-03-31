@@ -19,6 +19,7 @@ df["Date"] = pd.to_datetime(df["Year"].astype(str) + "-" + df["Month"].astype(st
 
 # Initialize Dash app
 app = dash.Dash(__name__)
+server = app.server  # Expose server for gunicorn
 
 # Layout
 app.layout = html.Div([
